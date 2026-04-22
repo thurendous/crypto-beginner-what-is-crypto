@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>暗号通貨とは何か？</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="progress-bar"></div>
+<div id="deck">
+
+
+<!-- ════════════════════════════════════════════
+     1 · タイトル
+     ════════════════════════════════════════════ -->
+<div class="slide active" id="s1">
+  <div style="font-size:74px;margin-bottom:20px;filter:drop-shadow(0 0 36px rgba(247,147,26,.5))">₿</div>
+  <h2 style="font-size:clamp(34px,5vw,64px);font-weight:700;letter-spacing:-.02em;background:linear-gradient(135deg,#fff 0%,rgba(255,255,255,.5) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
+    暗号通貨とは何か？
+  </h2>
+  <h3 style="margin-top:12px;margin-bottom:26px">歴史・思想・そしてお金の未来</h3>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center">
+    <span class="badge badge-o">Bitcoin</span>
+    <span class="badge badge-b">Ethereum</span>
+    <span class="badge badge-g">DeFi</span>
+    <span class="badge badge-p">Web3</span>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     1b · 今日のスタンス
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s1b">
+  <div class="tag">はじめに</div>
+  <h2 style="max-width:820px;text-align:center">今日話す内容は<span class="go">「すぐに役立たない」</span><br>けれど<span class="o">最も根本的な本質</span></h2>
+  <div class="divider" style="background:var(--orange);margin:14px auto 26px"></div>
+  <div style="max-width:760px;width:100%;display:flex;flex-direction:column;gap:14px">
+    <div class="card" style="border-left:3px solid var(--gold);display:flex;align-items:flex-start;gap:16px">
+      <div style="font-size:32px;flex-shrink:0;line-height:1">🧱</div>
+      <div>
+        <div class="card-title" style="color:var(--gold);margin-bottom:5px">概念・抽象的な内容が中心です</div>
+        <div class="card-body">「どのコインを買えばいい？」という話は今日はしません。価格より先に、「なぜ存在するのか」を理解することが目的です。</div>
+      </div>
+    </div>
+    <div class="card" style="border-left:3px solid var(--orange);display:flex;align-items:flex-start;gap:16px">
+      <div style="font-size:32px;flex-shrink:0;line-height:1">🌱</div>
+      <div>
+        <div class="card-title" style="color:var(--orange);margin-bottom:5px">ぱっと見、役に立たないように見えるかもしれない</div>
+        <div class="card-body">でも、この基礎を持っているかどうかで、時間の積み重ねにより2年後・5年後の理解の深さが全く変わります。</div>
+      </div>
+    </div>
+    <div class="card" style="border-left:3px solid var(--green);display:flex;align-items:flex-start;gap:16px">
+      <div style="font-size:32px;flex-shrink:0;line-height:1">🧭</div>
+      <div>
+        <div class="card-title" style="color:var(--green);margin-bottom:5px">本質を知ると、迷わなくなる</div>
+        <div class="card-body">ニュースや価格などに惑わされず、自分で判断できる「軸」を形成してほしい</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     2 · お金とは何か？
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s2">
+  <div class="tag">基礎知識</div>
+  <h2>そもそも<span class="go">お金</span>とは何か？</h2>
+  <div class="divider" style="background:var(--gold)"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;width:100%;max-width:900px;align-items:start">
+    <div>
+      <p style="font-size:clamp(13px,1.5vw,16px);color:rgba(232,232,240,.75);line-height:1.85;margin-bottom:18px">
+        お金とは、社会が価値を<strong style="color:var(--text)">時間</strong>と<strong style="color:var(--text)">空間</strong>を超えて保存・移転するために使う技術です。3つの機能を持ちます：
+      </p>
+      <div style="display:flex;flex-direction:column;gap:11px">
+        <div class="card" style="border-left:2px solid var(--gold)">
+          <div class="card-title" style="color:var(--gold)">① 交換の媒体</div>
+          <div class="card-body">物々交換なしに商品やサービスを売買するために使われる</div>
+        </div>
+        <div class="card" style="border-left:2px solid var(--gold)">
+          <div class="card-title" style="color:var(--gold)">② 価値の保存手段</div>
+          <div class="card-body">時間をかけて購買力を維持する——最も重要な特性</div>
+        </div>
+        <div class="card" style="border-left:2px solid var(--gold)">
+          <div class="card-title" style="color:var(--gold)">③ 計算単位</div>
+          <div class="card-body">あらゆるものの価格を測る共通の尺度</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="card" style="border-color:rgba(251,191,36,.25);background:rgba(251,191,36,.04);margin-bottom:13px">
+        <div class="card-title" style="color:var(--gold);font-size:14px">重要概念：「ハードネス（硬さ）」</div>
+        <div class="card-body" style="margin-top:8px;line-height:1.75">
+          <strong style="color:var(--text)">ハードマネー</strong>＝増産が困難な通貨<br>
+          <strong style="color:var(--text)">ソフトマネー</strong>＝供給量を簡単に増やせる通貨<br><br>
+          歴史を通じて、<span class="go">貨幣供給を支配する者は他者を犠牲にして利益を得てきた</span>。社会は常により「硬い」お金へと向かう。
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">ストック・トゥ・フロー（S2F）</div>
+        <div class="card-body" style="margin-top:5px">「硬さ」の指標：既存供給量 ÷ 年間新規供給量。数値が高いほど、お金は「硬い」。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     3 · お金の歴史
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s3">
+  <div class="tag">お金の歴史</div>
+  <h2><span class="go">物々交換</span>から<span class="o">Bitcoin</span>へ</h2>
+  <div class="divider"></div>
+  <div style="width:100%;max-width:940px">
+    <div class="step-flow" style="margin-bottom:26px">
+      <div class="step">
+        <div class="step-icon">🤝</div>
+        <div class="step-label">物々交換</div>
+        <div class="step-sub">非効率</div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-icon">🐄</div>
+        <div class="step-label">商品貨幣</div>
+        <div class="step-sub">塩・家畜・貝殻</div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-icon" style="filter:drop-shadow(0 0 8px rgba(251,191,36,.5))">👑</div>
+        <div class="step-label" style="color:var(--gold)">金（ゴールド）</div>
+        <div class="step-sub">5,000年間</div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-icon">📜</div>
+        <div class="step-label">紙幣（金本位）</div>
+        <div class="step-sub">利便性</div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-icon" style="filter:opacity(.6)">💸</div>
+        <div class="step-label" style="color:var(--red)">法定通貨</div>
+        <div class="step-sub">1971年〜現在</div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-icon" style="filter:drop-shadow(0 0 8px rgba(247,147,26,.5))">₿</div>
+        <div class="step-label" style="color:var(--orange)">Bitcoin</div>
+        <div class="step-sub">2009年〜</div>
+      </div>
+    </div>
+    <div class="grid2" style="gap:14px">
+      <div class="card" style="border-top:2px solid var(--gold)">
+        <div class="card-title" style="color:var(--gold)">金が5,000年間選ばれた理由</div>
+        <div class="card-body" style="margin-top:6px;line-height:1.7">
+          金の供給量は需要に関わらず年間約2%しか増えない——金を「印刷」することはできない。高いS2F（約60倍）が、金を史上最も「硬い」商品通貨にした。希少性・耐久性・分割可能性・携帯性に優れる。
+        </div>
+      </div>
+      <div class="card" style="border-top:2px solid var(--red)">
+        <div class="card-title" style="color:var(--red)">ニクソン・ショック — 1971年8月15日</div>
+        <div class="card-body" style="margin-top:6px;line-height:1.7">
+          ニクソン大統領が米ドルと金の交換を停止。歴史上初めて、世界の基軸通貨は「何も」担保しない——政府の約束だけで成立する通貨になった。純粋な法定通貨の時代が始まった。
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     3b · お金のイノベーションはなぜ起きなかったのか
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s3b">
+  <div class="tag">歴史的文脈</div>
+  <h2><span class="go">2,600年</span>で、真のイノベーションは数回だけ</h2>
+  <div class="divider" style="background:var(--gold)"></div>
+  <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:32px;width:100%;max-width:940px;align-items:start">
+    <div>
+      <div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:12px;font-family:'JetBrains Mono',monospace">お金の「本当の」イノベーション年表</div>
+      <div style="display:flex;flex-direction:column;gap:0">
+        <div style="display:flex;gap:0;align-items:stretch">
+          <div style="display:flex;flex-direction:column;align-items:center;width:24px;flex-shrink:0"><div style="width:10px;height:10px;border-radius:50%;background:var(--gold);margin-top:4px"></div><div style="width:2px;flex:1;background:rgba(255,255,255,.1)"></div></div>
+          <div style="padding:0 0 18px 12px"><span style="font-family:'JetBrains Mono',monospace;color:var(--gold);font-size:12px">紀元前600年</span><span style="color:rgba(232,232,240,.85);font-size:13.5px;margin-left:10px"><strong style="color:var(--text)">硬貨の誕生</strong>——リディア王国。金属に価値を刻印する</span></div>
+        </div>
+        <div style="display:flex;gap:0;align-items:stretch">
+          <div style="display:flex;flex-direction:column;align-items:center;width:24px;flex-shrink:0"><div style="width:10px;height:10px;border-radius:50%;background:var(--gold);margin-top:4px"></div><div style="width:2px;flex:1;background:rgba(255,255,255,.1)"></div></div>
+          <div style="padding:0 0 6px 12px"><span style="font-family:'JetBrains Mono',monospace;color:rgba(251,191,36,.5);font-size:11px">9世紀（唐）</span><span style="color:rgba(232,232,240,.45);font-size:12.5px;margin-left:10px">飛銭（飛錢）——為替手形・送金証書。流通紙幣ではない</span></div>
+          <div style="padding:0 0 18px 12px"><span style="font-family:'JetBrains Mono',monospace;color:var(--gold);font-size:12px">1023年（北宋）</span><span style="color:rgba(232,232,240,.85);font-size:13.5px;margin-left:10px"><strong style="color:var(--text)">交子（こうし）</strong>——世界初の流通紙幣。四川で政府発行</span></div>
+        </div>
+        <div style="display:flex;gap:0;align-items:stretch">
+          <div style="display:flex;flex-direction:column;align-items:center;width:24px;flex-shrink:0"><div style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.3);margin-top:4px"></div><div style="width:2px;flex:1;background:rgba(255,255,255,.1)"></div></div>
+          <div style="padding:0 0 18px 12px"><span style="font-family:'JetBrains Mono',monospace;color:var(--muted);font-size:12px">1494年</span><span style="color:rgba(232,232,240,.6);font-size:13.5px;margin-left:10px">複式簿記の確立（パチョーリ）</span></div>
+        </div>
+        <div style="display:flex;gap:0;align-items:stretch">
+          <div style="display:flex;flex-direction:column;align-items:center;width:24px;flex-shrink:0"><div style="width:10px;height:10px;border-radius:50%;background:var(--gold);margin-top:4px"></div><div style="width:2px;flex:1;background:rgba(255,255,255,.1)"></div></div>
+          <div style="padding:0 0 18px 12px"><span style="font-family:'JetBrains Mono',monospace;color:var(--gold);font-size:12px">1694年</span><span style="color:rgba(232,232,240,.85);font-size:13.5px;margin-left:10px"><strong style="color:var(--text)">近代中央銀行</strong>——イングランド銀行。国家が通貨を独占管理</span></div>
+        </div>
+        <div style="display:flex;gap:0;align-items:stretch">
+          <div style="display:flex;flex-direction:column;align-items:center;width:24px;flex-shrink:0"><div style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.25);margin-top:4px"></div><div style="width:2px;flex:1;background:rgba(255,255,255,.1)"></div></div>
+          <div style="padding:0 0 18px 12px"><span style="font-family:'JetBrains Mono',monospace;color:var(--muted);font-size:12px">1950〜1973年</span><span style="color:rgba(232,232,240,.55);font-size:13.5px;margin-left:10px">クレジットカード・ATM・SWIFT……既存システムの「窓口」が増えただけ</span></div>
+        </div>
+        <div style="display:flex;gap:0;align-items:stretch">
+          <div style="display:flex;flex-direction:column;align-items:center;width:24px;flex-shrink:0"><div style="width:10px;height:10px;border-radius:50%;background:var(--orange);margin-top:4px;box-shadow:0 0 8px rgba(247,147,26,.6)"></div></div>
+          <div style="padding:0 0 0 12px"><span style="font-family:'JetBrains Mono',monospace;color:var(--orange);font-size:12px">2009年</span><span style="color:rgba(232,232,240,.85);font-size:13.5px;margin-left:10px"><strong style="color:var(--orange)">Bitcoin</strong>——315年ぶりの、本当に新しいお金のプリミティブ</span></div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div class="card" style="border-color:rgba(251,191,36,.3);background:rgba(251,191,36,.04)">
+        <div class="card-title" style="color:var(--gold)">なぜイノベーションが起きなかったのか？</div>
+        <div style="margin-top:10px;display:flex;flex-direction:column;gap:8px;font-size:13px">
+          <div style="display:flex;gap:8px;align-items:start"><span style="color:var(--orange);font-weight:700;min-width:14px">①</span><span style="color:rgba(232,232,240,.8)"><strong style="color:var(--text)">ネットワーク効果</strong>——みんなが使うから使わざるを得ない</span></div>
+          <div style="display:flex;gap:8px;align-items:start"><span style="color:var(--orange);font-weight:700;min-width:14px">②</span><span style="color:rgba(232,232,240,.8)"><strong style="color:var(--text)">国家の既得権益</strong>——通貨発行権は最大の権力の源泉</span></div>
+          <div style="display:flex;gap:8px;align-items:start"><span style="color:var(--orange);font-weight:700;min-width:14px">③</span><span style="color:rgba(232,232,240,.8)"><strong style="color:var(--text)">規制の壁</strong>——既存金融機関しかインフラにアクセスできない</span></div>
+        </div>
+      </div>
+      <div class="card" style="border-color:rgba(239,68,68,.25)">
+        <div class="card-title" style="color:var(--red);font-size:13px">「イノベーション」に見えて、実はそうでないもの</div>
+        <div class="card-body" style="margin-top:7px;line-height:1.75;font-size:12.5px">
+          ATM・クレジットカード・ネットバンキング・PayPal——これらは<strong style="color:var(--text)">すべて「既存システムの新しい窓口」</strong>にすぎない。<br><br>
+          裏側の構造——<span style="color:rgba(232,232,240,.55)">信頼できる第三者が台帳を管理し、国家が価値を保証する</span>——は<strong style="color:var(--text)">1694年から一切変わっていない</strong>。
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     4 · 法定通貨の問題
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s4">
+  <div class="tag">問題 · 1971〜2008年</div>
+  <h2><span class="r">法定通貨</span>という実験</h2>
+  <div class="divider" style="background:var(--red)"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:26px;width:100%;max-width:880px;align-items:start">
+    <div>
+      <ul class="bullets">
+        <li>1971年以降、米ドルは金に対して<strong>購買力の97%以上</strong>を失った</li>
+        <li><strong>インフレは「隠れた税」</strong>だ——毎年、あなたの貯蓄は静かに価値を失っていく</li>
+        <li><strong>カンティヨン効果</strong>：新規発行されたお金は最初に受け取る者（銀行・政府）が恩恵を受け、他の人は物価上昇で代償を払う</li>
+        <li>2008年：長年の低金利政策とモラルの欠如が世界的な金融危機として起きた</li>
+        <li>2008年以降、中央銀行は「量的緩和」として<strong>20兆ドル以上</strong>の新たなお金を生み出した</li>
+      </ul>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div class="card" style="border-color:rgba(239,68,68,.25)">
+        <div class="card-icon">📉</div>
+        <div class="card-title">1ドルの購買力（1971〜2024年）</div>
+        <div class="card-body" style="margin-top:6px">1971年の1ドルは今日では約<strong style="color:var(--red)">0.06ドル</strong>分の価値しか買えない。その富は消えたのではなく——お金を印刷した者に再分配されたのだ。</div>
+      </div>
+      <div class="card" style="border-color:rgba(239,68,68,.2)">
+        <div class="card-icon">🏦</div>
+        <div class="card-title">大きすぎて潰せない（Too Big to Fail）</div>
+        <div class="card-body" style="margin-top:6px">2008年、顧客の預金を賭けに使った銀行は税金で救済された。利益は私的に、損失は公的に。システムは自己保護する。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     5 · サイバーパンク運動
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s5">
+  <div class="tag">背景 · 1980〜2000年代</div>
+  <h2><span class="g">サイバーパンク</span>運動</h2>
+  <div class="divider" style="background:var(--green)"></div>
+  <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:32px;width:100%;max-width:880px;align-items:start">
+    <ul class="bullets green">
+      <li>プライバシーを基本的権利と考える<strong>暗号学者とリバタリアン</strong>たちの運動</li>
+      <li><em>「政府や企業が善意でプライバシーを与えてくれると期待することはできない」</em></li>
+      <li>検閲耐性のあるデジタル通貨の構築に何十年も費やした</li>
+      <li>b-money（1998年）、HashCash（2002年）、e-gold、DigiCash…すべて失敗</li>
+      <li>解決できなかった課題：信頼できる中央機関なしに<strong>「二重支払い」</strong>を防ぐにはどうするか？</li>
+    </ul>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div class="card" style="border-color:rgba(0,211,149,.25)">
+        <div class="card-title" style="color:var(--green)">目標</div>
+        <div class="card-body" style="margin-top:6px;line-height:1.7">「コードは法律だ。暗号技術は個人に、許可を求めることなく、監視や金融支配から身を守るツールを与える。」</div>
+      </div>
+      <div class="card">
+        <div class="card-title">主要人物</div>
+        <div class="card-body" style="margin-top:6px">David Chaum · Tim May · Wei Dai · Adam Back · Hal Finney</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     6 · サトシ・ナカモト
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s6">
+  <div class="tag">起源 · 2008年10月31日</div>
+  <h2><span class="o">サトシ・ナカモト</span>の登場</h2>
+  <div class="divider"></div>
+  <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:32px;width:100%;max-width:880px;align-items:center">
+    <ul class="bullets">
+      <li>2008年のハロウィンに、匿名の人物（またはグループ）が暗号学のメーリングリストに<strong>9ページの論文</strong>を投稿した</li>
+      <li>タイトル：<em>「Bitcoin: A Peer-to-Peer Electronic Cash System」</em></li>
+      <li>信頼できる第三者機関なしに、二重支払い問題を<strong>見事に解決</strong>した</li>
+      <li>2009年1月3日、Bitcoinネットワークを起動</li>
+      <li>開発をコミュニティに静かに引き渡し、<strong>2011年4月に姿を消した</strong>——その正体は今日まで不明のまま</li>
+    </ul>
+    <div class="card" style="border-color:rgba(247,147,26,.3)">
+      <div class="card-icon">🕵️</div>
+      <div class="card-title" style="font-size:15px">サトシとは誰か？</div>
+      <div class="card-body" style="margin:8px 0 14px;line-height:1.7">個人？グループ？誰も知らない。サトシはネットワーク稼働初期に報酬として約<strong>100万BTC</strong>をマイニングした。そのウォレットは一度も動いていない。</div>
+      <span class="badge badge-o">ピーク時 約6〜10兆円相当</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     7 · Bitcoinとは何か？
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s7">
+  <div class="tag">Bitcoin · 定義</div>
+  <h2><span class="o">Bitcoin</span> とは何か？</h2>
+  <div class="divider"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:26px;width:100%;max-width:900px;align-items:start">
+    <div>
+      <p style="font-size:clamp(13px,1.5vw,16px);color:rgba(232,232,240,.8);line-height:1.85;margin-bottom:16px">
+        Bitcoinは<span class="o">人類史上初の「デジタル希少品」</span>だ。Bitcoin以前、デジタルファイル——写真、音楽、文書——はすべてゼロコストで無限にコピーできた。
+      </p>
+      <p style="font-size:clamp(13px,1.5vw,16px);color:rgba(232,232,240,.8);line-height:1.85;margin-bottom:16px">
+        サトシはこれを解決した：<strong style="color:var(--text)">初めて、デジタル資産を複製できなくなった</strong>。すべてのBitcoinは唯一無二。すべての取引は不可逆。コピー＆ペーストは不可能。
+      </p>
+      <div style="display:flex;gap:7px;flex-wrap:wrap">
+        <span class="badge badge-o">デジタルゴールド</span>
+        <span class="badge badge-c">貨幣ネットワーク</span>
+        <span class="badge badge-g">オープンプロトコル</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:11px">
+      <div class="card" style="border-top:2px solid var(--orange)">
+        <div class="card-title">貨幣ネットワーク</div>
+        <div class="card-body" style="margin-top:5px;line-height:1.65">Bitcoinは企業でも、製品でも、ファイルでもない。それは<strong style="color:var(--text)">プロトコル</strong>だ——お金のためのインターネットのようなもの。誰でも参加できるグローバルなオープンネットワーク。</div>
+      </div>
+      <div class="card" style="border-top:2px solid var(--orange)">
+        <div class="card-title">非政治的なお金</div>
+        <div class="card-body" style="margin-top:5px;line-height:1.65">Bitcoinには国籍も、イデオロギーも、CEOもない。そのルールは政府でも裁判所でも軍隊でもなく、<strong style="color:var(--text)">数学と暗号技術</strong>によって執行される。</div>
+      </div>
+      <div class="card" style="border-top:2px solid var(--orange)">
+        <div class="card-title">健全なお金（Sound Money）</div>
+        <div class="card-body" style="margin-top:5px;line-height:1.65">歴史上初めて、供給スケジュールが<strong style="color:var(--text)">数学的に保証</strong>されたお金——政治的決定に左右されない。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     8 · Bitcoinの貨幣設計
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s8">
+  <div class="tag">Bitcoin · 特性</div>
+  <h2>Bitcoinの<span class="o">貨幣設計</span></h2>
+  <div class="divider"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:26px;width:100%;max-width:900px;align-items:start">
+    <div>
+      <div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:10px;font-family:'JetBrains Mono',monospace">半減期スケジュール</div>
+      <table class="halving-table">
+        <thead><tr><th>年</th><th>イベント</th><th>新規BTC/ブロック</th></tr></thead>
+        <tbody>
+          <tr><td>2009</td><td>ジェネシス（創設）</td><td>50 BTC</td></tr>
+          <tr><td>2012</td><td>第1回半減期</td><td>25 BTC</td></tr>
+          <tr><td>2016</td><td>第2回半減期</td><td>12.5 BTC</td></tr>
+          <tr><td>2020</td><td>第3回半減期</td><td>6.25 BTC</td></tr>
+          <tr class="hl"><td>2024</td><td>第4回半減期 ✦</td><td style="color:var(--orange)">3.125 BTC</td></tr>
+          <tr><td>〜2140</td><td>最後のBitcoin</td><td style="color:var(--muted)">0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:11px">
+      <div class="card" style="border-left:3px solid var(--orange)">
+        <div class="card-title">上限：2,100万枚</div>
+        <div class="card-body" style="margin-top:5px">政府も、企業も、サトシ自身も、これ以上増やすことはできない。約1,970万枚がすでにマイニング済み。約400万枚が永遠に失われたと推定。</div>
+      </div>
+      <div class="card" style="border-left:3px solid var(--orange)">
+        <div class="card-title">小数点8桁まで分割可能</div>
+        <div class="card-body" style="margin-top:5px">1 Bitcoin = 1億サトシ。1BTCが1億円になっても、1円分だけ使うことができる。</div>
+      </div>
+      <div class="card" style="border-left:3px solid var(--orange)">
+        <div class="card-title">供給量は時間とともに減少</div>
+        <div class="card-body" style="margin-top:5px">約4年ごとに新規供給量が半分になる。法定通貨と逆——インフレではなく、プログラムによるデフレが起きる。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     9 · なぜBitcoinに価値があるのか？
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s9">
+  <div class="tag">Bitcoin · 価値</div>
+  <h2>なぜBitcoinに<span class="o">価値</span>があるのか？</h2>
+  <div class="divider"></div>
+  <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:28px;width:100%;max-width:920px;align-items:start">
+    <div>
+      <div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:12px;font-family:'JetBrains Mono',monospace">ストック・トゥ・フロー比率（高いほど「硬い」お金）</div>
+      <div class="s2f-row">
+        <div class="s2f-label" style="color:var(--red)">米ドル（法定通貨）</div>
+        <div class="s2f-bar-wrap"><div class="s2f-bar" style="width:1%;background:var(--red)"></div></div>
+        <div class="s2f-val" style="color:var(--red)">〜0</div>
+      </div>
+      <div class="s2f-row">
+        <div class="s2f-label" style="color:var(--muted)">銀（シルバー）</div>
+        <div class="s2f-bar-wrap"><div class="s2f-bar" style="width:18%;background:var(--muted)"></div></div>
+        <div class="s2f-val" style="color:var(--muted)">〜20倍</div>
+      </div>
+      <div class="s2f-row">
+        <div class="s2f-label" style="color:var(--gold)">金（ゴールド）</div>
+        <div class="s2f-bar-wrap"><div class="s2f-bar" style="width:50%;background:var(--gold)"></div></div>
+        <div class="s2f-val" style="color:var(--gold)">〜60倍</div>
+      </div>
+      <div class="s2f-row">
+        <div class="s2f-label" style="color:var(--orange)">Bitcoin（2024年以降）</div>
+        <div class="s2f-bar-wrap"><div class="s2f-bar" style="width:100%;background:linear-gradient(90deg,var(--orange),var(--gold))"></div></div>
+        <div class="s2f-val" style="color:var(--orange)">〜120倍</div>
+      </div>
+      <p style="font-size:12px;color:var(--muted);margin-top:13px;line-height:1.65">2024年の半減期後、BitcoinのS2F比率は<strong style="color:var(--text)">歴史上初めて金を上回った</strong>。</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div class="card">
+        <div class="card-title">🔒 絶対的な希少性</div>
+        <div class="card-body" style="margin-top:4px">2,100万枚の上限は世界中の何千もの独立したノードが執行する。誰も変えられない。</div>
+      </div>
+      <div class="card">
+        <div class="card-title">🌐 実用性</div>
+        <div class="card-body" style="margin-top:4px">世界中どこへでも数分で、24時間365日、銀行や政府の許可なく価値を送れる。</div>
+      </div>
+      <div class="card">
+        <div class="card-title">⚡ ネットワーク効果</div>
+        <div class="card-body" style="margin-top:4px">新しいユーザーが増えるたびに有用性とセキュリティが向上する。価値はネットワークとともに成長する（メトカーフの法則）。</div>
+      </div>
+      <div class="card">
+        <div class="card-title">🛡️ カウンターパーティリスクなし</div>
+        <div class="card-body" style="margin-top:4px">自己管理されたBitcoinにはデフォルトリスクがない。銀行預金と異なり、凍結・没収・希薄化はできない。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     10 · Bitcoinは誰のものか？
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s10">
+  <div class="tag">Bitcoin · ガバナンスと所有権</div>
+  <h2>Bitcoinは<span class="o">誰のもの</span>か？</h2>
+  <div class="divider"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:26px;width:100%;max-width:900px;align-items:start">
+    <div>
+      <p style="font-size:clamp(14px,1.6vw,17px);color:rgba(232,232,240,.85);line-height:1.8;margin-bottom:18px">
+        答えは<span class="o">「誰でもなく」</span>——そして<span class="o">「みんな」</span>だ。
+      </p>
+      <ul class="bullets">
+        <li>Bitcoinを所有する企業はない——それはオープンソースのプロトコルだ</li>
+        <li>政府もコントロールできない——数千の独立したノードがルールを執行している</li>
+        <li>サトシのコイン（約100万BTC）は一度も動いていない——永遠に失われている可能性がある</li>
+        <li><strong>「キーを持たざる者はコインを持たず」</strong>——秘密鍵を保持する者がBitcoinをコントロールする</li>
+        <li>ルール変更（例：発行量を増やす）にはネットワーク全体のコンセンサスが必要——事実上不可能だ</li>
+      </ul>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div class="card" style="border-color:rgba(247,147,26,.3)">
+        <div class="card-title" style="color:var(--orange);font-size:14px">2,100万BTCの分布（〜2024年）</div>
+        <div style="margin-top:13px;display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:12.5px">
+            <span style="color:var(--muted)">採掘済み・流通中</span>
+            <span class="badge badge-o">約1,970万 BTC</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:12.5px">
+            <span style="color:var(--muted)">永遠に失われたと推定</span>
+            <span class="badge badge-r">約300〜400万 BTC</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:12.5px">
+            <span style="color:var(--muted)">サトシの未移動コイン</span>
+            <span class="badge badge-go">約100万 BTC</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:12.5px">
+            <span style="color:var(--muted)">未採掘（残り）</span>
+            <span class="badge badge-c">約130万 BTC</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">🔑 セルフカストディ（自己管理）</div>
+        <div class="card-body" style="margin-top:5px">Bitcoinのウォレットは秘密鍵——あなただけが知る256ビットの数字だ。銀行は凍結できない。政府はあなたの協力なしには没収できない。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     11 · Bitcoinの歴史
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s11">
+  <div class="tag">Bitcoin · 歴史</div>
+  <h2>0円から<span class="o">1,500万円超</span>へ</h2>
+  <div class="divider"></div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-year">2009</div><div class="tl-dot"></div>
+      <div><div class="tl-title">ジェネシスブロック — 1月3日</div>
+      <div class="tl-desc">最初のブロックが採掘される。埋め込まれたメッセージ：<em>「大臣、銀行への2度目の救済措置の瀬戸際に立つ」</em>。これは宣言だった。</div></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2010</div><div class="tl-dot"></div>
+      <div><div class="tl-title">Bitcoinピザの日 — 5月22日</div>
+      <div class="tl-desc">ラスロ・ハニエツが2枚のピザに<strong>1万BTC</strong>を支払った（約41ドル）。初の実世界での取引。ピーク時には約1,000億円相当。</div></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2011</div><div class="tl-dot"></div>
+      <div><div class="tl-title">1BTC = 1ドル · サトシ、姿を消す</div>
+      <div class="tl-desc">ドルと同価値に達する。サトシは最後のメールを送り、姿を消す。最初のアルトコインが登場。</div></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2017</div><div class="tl-dot" style="background:var(--gold)"></div>
+      <div><div class="tl-title">1BTC = 約230万円 · 世界的な熱狂</div>
+      <div class="tl-desc">ICOブーム。主要メディアが連日報道。2018年には約30万円まで暴落。多くの人がBitcoinの「死」を宣告した。</div></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2020</div><div class="tl-dot"></div>
+      <div><div class="tl-title">機関投資家の参入</div>
+      <div class="tl-desc">マイクロストラテジー、テスラ、スクエアがBitcoinをバランスシートに追加。「デジタルゴールド」という物語が確立する。</div></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2024</div><div class="tl-dot" style="background:var(--gold)"></div>
+      <div><div class="tl-title">1BTC = 1,500万円超 · 現物ETF承認</div>
+      <div class="tl-desc">SECがBitcoin現物ETFを承認。ブラックロック、フィデリティが参入。第4回半減期。機関投資家の時代へ。</div></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     11b · Bitcoinなくしてブロックチェーンを語れない
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s11b">
+  <div class="tag">Bitcoin → Ethereum · 転換点</div>
+  <h2>Bitcoinの<span class="o">「制約」</span>が<span class="b">Ethereum</span>を生んだ</h2>
+  <div class="divider"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;width:100%;max-width:920px;align-items:start">
+    <div>
+      <p style="font-size:clamp(13px,1.5vw,15.5px);color:rgba(232,232,240,.8);line-height:1.85;margin-bottom:16px">
+        サトシは意図的にBitcoinをシンプルに設計した。スマートコントラクトはない。プログラマビリティもない。<strong style="color:var(--text)">これは限界ではなく、選択だ。</strong>
+      </p>
+      <p style="font-size:clamp(13px,1.5vw,15.5px);color:rgba(232,232,240,.8);line-height:1.85;margin-bottom:16px">
+        まず<span class="o">一つのことを完璧に証明する</span>——「中央機関なしに価値は移転できる」。2009年から今日まで、Bitcoinネットワークは一度も止まらず、一度もハックされていない。
+      </p>
+      <div class="card" style="border-color:rgba(247,147,26,.3);background:rgba(247,147,26,.04)">
+        <div class="card-title" style="color:var(--orange)">この証明が生んだ問い</div>
+        <div style="margin-top:10px;display:flex;flex-direction:column;gap:12px;font-size:13.5px">
+          <div style="display:flex;gap:10px;align-items:start">
+            <span style="color:var(--muted);min-width:20px">①</span>
+            <div>
+              <span style="color:rgba(232,232,240,.8)">台帳は信頼できる——では<strong style="color:var(--text)">その台帳でコードを動かせるか？</strong></span>
+              <div style="margin-top:3px;font-size:12px;color:var(--blue)">→ YES ── それがスマートコントラクト（Ethereum）だ</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:start">
+            <span style="color:var(--muted);min-width:20px">②</span>
+            <div>
+              <span style="color:rgba(232,232,240,.8)">資産は送れる——では<strong style="color:var(--text)">条件付きで自動実行できるか？</strong></span>
+              <div style="margin-top:3px;font-size:12px;color:var(--blue)">→ YES ── 「XならYを実行」を仲介者なしに</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:start">
+            <span style="color:var(--muted);min-width:20px">③</span>
+            <div>
+              <span style="color:rgba(232,232,240,.8)">通貨は作れた——では<strong style="color:var(--text)">その上に金融システムを作れるか？</strong></span>
+              <div style="margin-top:3px;font-size:12px;color:var(--green)">→ YES ── それがDeFi（分散型金融）だ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div class="card" style="border-color:rgba(239,68,68,.2)">
+        <div class="card-title" style="color:var(--red);font-size:13px">Bitcoinを知らずに「ブロックチェーン」を語ると…</div>
+        <div class="card-body" style="margin-top:7px;line-height:1.75;font-size:13px">
+          DeFiが「なぜ必要か」がわからない<br>
+          スマートコントラクトが「なぜ革命的か」がわからない<br>
+          Ethereumの設計判断が「なぜそうなのか」がわからない<br><br>
+          <span style="color:rgba(232,232,240,.45)">Bitcoinは「答え」ではなく、すべての「問い」の出発点だ</span>
+        </div>
+      </div>
+      <div class="card" style="border-color:rgba(98,126,234,.3);background:rgba(98,126,234,.04)">
+        <div class="card-icon" style="font-size:20px">💡</div>
+        <div class="card-body" style="line-height:1.8;font-size:13.5px;color:rgba(232,232,240,.75)">
+          ヴィタリック・ブテリンは<em>Bitcoin Magazine</em>の創刊編集者だった。Bitcoinを深く理解し、その「意図的な制約」を見抜いたからこそ——<strong style="color:var(--text)">「制約を外したら何ができるか？」</strong>という問いを立てられた。
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     12 · イーサリアム
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s12">
+  <div class="tag">2015年 · Bitcoinの先へ</div>
+  <h2><span class="b">Ethereum</span>：コンピューターを内蔵したBitcoin</h2>
+  <div class="divider" style="background:var(--blue)"></div>
+  <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:32px;width:100%;max-width:880px;align-items:center">
+    <ul class="bullets blue">
+      <li>2013年末、当時<strong>19歳のヴィタリック・ブテリン</strong>によって提案された</li>
+      <li>Bitcoinは分散型台帳が可能であることを証明した。Ethereumは問いかけた：<em>「その台帳でコードを実行できたら？」</em></li>
+      <li><strong>スマートコントラクト</strong>——ブロックチェーン上で自動実行されるプログラム：「XならばYを自動実行する」</li>
+      <li>弁護士も、銀行も、中間業者も、契約の履行に必要ない</li>
+      <li>2015年7月に稼働——DeFi・NFT・DAO・Web3を可能にした</li>
+    </ul>
+    <div class="card" style="border-color:rgba(98,126,234,.35);background:rgba(98,126,234,.04)">
+      <div class="card-icon">💡</div>
+      <div class="card-title" style="color:var(--blue);font-size:14px">スマートコントラクトの例</div>
+      <div class="card-body" style="margin-top:9px;line-height:1.8">
+        <em>「アリスが1ETHを送ると→自動的に100トークンが送られる」</em><br><br>
+        自動実行。仲介者なし。コードはブロックチェーン上に永続的に刻まれる——誰にも止められない。
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     12b · ETH はお金になれるか？（仕組み編）
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s12b">
+  <div class="tag">Ethereum · 貨幣としての仕組み</div>
+  <h2><span class="b">ETH</span> はお金になれるか？</h2>
+  <div class="divider" style="background:var(--blue)"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:26px;width:100%;max-width:900px;align-items:center">
+    <div style="display:flex;flex-direction:column;gap:13px">
+      <div class="card" style="border-left:3px solid var(--blue)">
+        <div class="card-title" style="color:var(--blue)">🔥 EIP-1559（2021年）</div>
+        <div class="card-body" style="margin-top:5px">取引手数料の一部が自動的に<strong>永久に焼却（バーン）</strong>される。ネットワーク利用が増えるほどETHの供給量が減る——法定通貨の真逆。</div>
+      </div>
+      <div class="card" style="border-left:3px solid var(--blue)">
+        <div class="card-title" style="color:var(--blue)">⚡ The Merge（2022年）</div>
+        <div class="card-body" style="margin-top:5px">PoW → PoS へ移行。新規発行量が<strong>約90%削減</strong>。EIP-1559との組み合わせで、高需要時には供給量がネットで減少する。</div>
+      </div>
+      <div class="card" style="border-left:3px solid var(--blue)">
+        <div class="card-title" style="color:var(--blue)">🏦 ステーキング利回り</div>
+        <div class="card-body" style="margin-top:5px">ETHをロックすることで年利<strong>約3〜5%</strong>の報酬を得られる。「保有しながら増やせる」——Bitcoinにはない特性。</div>
+      </div>
+    </div>
+    <div class="card" style="border-color:rgba(98,126,234,.35);background:rgba(98,126,234,.05)">
+      <div class="card-icon">🔊</div>
+      <div class="card-title" style="color:var(--blue)">「超健全なお金」（Ultra Sound Money）</div>
+      <div class="card-body" style="margin-top:10px;line-height:1.85">
+        The Merge ＋ EIP-1559 の組み合わせにより、ETHは高需要時に<strong style="color:var(--text)">デフレ資産</strong>になった。<br><br>
+        <span style="color:rgba(232,232,240,.6)">Bitcoin ＝ 供給量が数学的に上限あり——「健全なお金」</span><br>
+        <strong style="color:var(--text)">Ethereum ＝ 需要に応じて供給量が減少——「超健全なお金」</strong><br><br>
+        <span style="color:rgba(232,232,240,.45);font-size:13px">※ この主張には論争もある。次のスライドで Bitcoin との違いを整理する。</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     12c · Bitcoin vs Ethereum — お金として何が違うか
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s12c">
+  <div class="tag">Ethereum · Bitcoin との比較</div>
+  <h2>Bitcoin vs Ethereum —<br><span class="b">お金として</span>何が違うか？</h2>
+  <div class="divider" style="background:var(--blue)"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;width:100%;max-width:920px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:11px">
+      <div class="card" style="border-top:3px solid var(--orange)">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+          <span style="font-size:28px">₿</span>
+          <div class="card-title" style="color:var(--orange);margin:0">Bitcoin ── デジタルゴールド</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:7px;font-size:14px">
+          <div style="display:flex;gap:8px"><span style="color:var(--green)">✓</span><span style="color:rgba(232,232,240,.8)">上限2,100万枚——絶対的な希少性</span></div>
+          <div style="display:flex;gap:8px"><span style="color:var(--green)">✓</span><span style="color:rgba(232,232,240,.8)">15年間一度もハックなし——実績</span></div>
+          <div style="display:flex;gap:8px"><span style="color:var(--green)">✓</span><span style="color:rgba(232,232,240,.8)">シンプル——「価値の保存」に特化</span></div>
+          <div style="display:flex;gap:8px"><span style="color:var(--muted)">–</span><span style="color:rgba(232,232,240,.55)">利回りなし・プログラマビリティなし</span></div>
+        </div>
+      </div>
+      <div class="card" style="border-top:3px solid var(--blue)">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+          <span style="font-size:28px">◆</span>
+          <div class="card-title" style="color:var(--blue);margin:0">Ethereum ── 生産的資産</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:7px;font-size:14px">
+          <div style="display:flex;gap:8px"><span style="color:var(--green)">✓</span><span style="color:rgba(232,232,240,.8)">バーン機構——実質的な希少性</span></div>
+          <div style="display:flex;gap:8px"><span style="color:var(--green)">✓</span><span style="color:rgba(232,232,240,.8)">ステーキング約3〜5%利回り</span></div>
+          <div style="display:flex;gap:8px"><span style="color:var(--green)">✓</span><span style="color:rgba(232,232,240,.8)">DeFiの基軸通貨——実用性が高い</span></div>
+          <div style="display:flex;gap:8px"><span style="color:var(--muted)">–</span><span style="color:rgba(232,232,240,.55)">供給上限なし・複雑性が高い</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="border-color:rgba(98,126,234,.3);height:100%;display:flex;flex-direction:column;justify-content:center">
+      <div class="card-icon">💎</div>
+      <div class="card-title">「トリプルポイント資産」</div>
+      <div class="card-body" style="margin-top:10px;line-height:1.9">
+        ETHは同時に3つの性質を持つ唯一の資産：<br><br>
+        <strong style="color:var(--text)">① 価値保存</strong>——バーンによるデフレ圧力<br>
+        <strong style="color:var(--text)">② 交換媒体</strong>——DeFi全体の基軸通貨<br>
+        <strong style="color:var(--text)">③ 生産的資産</strong>——ステーキング利回りを生む<br><br>
+        <span style="color:rgba(232,232,240,.5);font-size:13px">金もBitcoinもこの3つを同時には持てない。これがETHの独自のポジションだ。</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     13 · DeFi
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s13">
+  <div class="tag">2020年 · DeFiサマー</div>
+  <h2><span class="g">DeFi</span>：銀行のない金融</h2>
+  <div class="divider" style="background:var(--green)"></div>
+  <div class="grid4">
+    <div class="card" style="border-top:2px solid var(--green)">
+      <div class="card-icon">🔄</div>
+      <div class="card-title">DEX（分散型取引所）</div>
+      <div class="card-body">企業があなたの資金を保管することなく、あらゆるトークンをP2Pで取引できる（Uniswap、Curve）</div>
+    </div>
+    <div class="card" style="border-top:2px solid var(--green)">
+      <div class="card-icon">🏦</div>
+      <div class="card-title">貸借（レンディング）</div>
+      <div class="card-body">銀行口座不要、審査なしで利息を得たり借入ができる（Aave、Compound）</div>
+    </div>
+    <div class="card" style="border-top:2px solid var(--green)">
+      <div class="card-icon">💵</div>
+      <div class="card-title">ステーブルコイン</div>
+      <div class="card-body">1ドルに価格固定された暗号通貨。法定通貨の安定性＋暗号通貨の自由（USDC、USDT、DAI）</div>
+    </div>
+    <div class="card" style="border-top:2px solid var(--green)">
+      <div class="card-icon">🏛️</div>
+      <div class="card-title">DAO（分散型自律組織）</div>
+      <div class="card-body">CEOのない組織。トークン保有者のオンチェーン投票によって運営される（MakerDAO、Compound）</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     14 · NFT & Web3
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s14">
+  <div class="tag">2021年 · 爆発的な広がり</div>
+  <h2><span class="p">NFT</span> と Web3</h2>
+  <div class="divider" style="background:var(--purple)"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:26px;width:100%;max-width:880px;align-items:start">
+    <div>
+      <div class="card" style="border-color:rgba(139,92,246,.3);margin-bottom:13px">
+        <div class="card-title" style="color:var(--purple);font-size:14px">NFT＝非代替性トークン（Non-Fungible Token）</div>
+        <div class="card-body" style="margin-top:8px;line-height:1.75">唯一無二のデジタルアイテムを所有していることを証明するブロックチェーン上の記録。デジタルの<strong style="color:var(--text)">「所有権証明書」</strong>と考えると分かりやすい——ブロックチェーンが公証人の役割を果たす。</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Web3のビジョン</div>
+        <div class="card-body" style="margin-top:5px">ユーザーが自分のデータ・コンテンツ・デジタルアイデンティティを所有する。<em>「無料ならあなたが商品だ」</em>——Web3はこの所有モデルを変えようとしている。</div>
+      </div>
+    </div>
+    <ul class="bullets">
+      <li>2021年のNFT市場の取引高は最大<strong>2.5兆円</strong>に達した</li>
+      <li>Beepleがクリスティーズのオークションで1枚のJPGを<strong>約75億円</strong>で売却した</li>
+      <li>CryptoPunks、Bored Ape Yacht Clubは文化的シンボルとなった</li>
+      <li>ゲーム：ゲーム内アイテムを本当の意味で所有し、自由に売却できる</li>
+      <li style="color:rgba(232,232,240,.4)">現実：2023年までにほとんどのNFTは価値の90%以上を失った——投機と真の実用性の問題は未解決のまま</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     15 · エコシステム
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s15">
+  <div class="tag">現在</div>
+  <h2>暗号通貨の<span class="o">エコシステム</span></h2>
+  <div class="divider"></div>
+  <div class="grid3">
+    <div class="card" style="border-top:3px solid var(--orange);text-align:center">
+      <div style="font-size:36px;margin-bottom:8px">₿</div>
+      <div class="card-title" style="font-size:15px">Bitcoin</div>
+      <div class="card-body" style="margin:8px 0 12px">デジタルゴールド。価値の保存手段。最初で最も信頼され、最も安全。貨幣レイヤー。</div>
+      <span class="badge badge-o">市場シェア約50%</span>
+    </div>
+    <div class="card" style="border-top:3px solid var(--blue);text-align:center">
+      <div style="font-size:36px;margin-bottom:8px">◆</div>
+      <div class="card-title" style="font-size:15px">Ethereum</div>
+      <div class="card-body" style="margin:8px 0 12px">世界のコンピューター。DeFi・NFT・Web3・スマートコントラクトのプラットフォーム。</div>
+      <span class="badge badge-b">市場シェア約17%</span>
+    </div>
+    <div class="card" style="border-top:3px solid var(--green);text-align:center">
+      <div style="font-size:36px;margin-bottom:8px">🌊</div>
+      <div class="card-title" style="font-size:15px">アルトコイン・トークン</div>
+      <div class="card-body" style="margin:8px 0 12px">Solana、BNB、XRP、Dogecoin… 2万種以上のコイン。ハイリスク・ハイリターン。</div>
+      <span class="badge badge-g">市場シェア約33%</span>
+    </div>
+  </div>
+  <div style="margin-top:20px;font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace">
+    総時価総額：約200〜300兆円 · ピーク：約300兆円（2021年11月）
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     16 · 核心的な原則
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s16">
+  <div class="tag">哲学</div>
+  <h2>核心的な<span class="o">原則</span></h2>
+  <div class="divider"></div>
+  <div class="principle-grid">
+    <div class="principle-card" style="border-color:var(--orange)">
+      <h4 style="color:var(--orange)">分散化（Decentralization）</h4>
+      <p>ネットワークをコントロールする単一の主体は存在しない。権力は世界中の何千もの独立したノードに分散している。逮捕すべきCEOもなく、シャットダウンすべきサーバーもない。</p>
+    </div>
+    <div class="principle-card" style="border-color:var(--blue)">
+      <h4 style="color:var(--blue)">トラストレス（Trustless）</h4>
+      <p>銀行も、企業も、人も信頼する必要はない。数学を信頼せよ。コードはオープンソース——誰でもすべてのルールを検証できる。</p>
+    </div>
+    <div class="principle-card" style="border-color:var(--green)">
+      <h4 style="color:var(--green)">パーミッションレス（Permissionless）</h4>
+      <p>インターネット接続があれば誰でも参加できる。銀行口座不要。政府の承認不要。国籍やアイデンティティによる差別なし。</p>
+    </div>
+    <div class="principle-card" style="border-color:var(--purple)">
+      <h4 style="color:var(--purple)">検閲耐性（Censorship Resistant）</h4>
+      <p>誰もあなたの口座を凍結したり、取引をブロックしたりできない。暗号資産はあなたのもの——秘密鍵を保持している限り。</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     17 · ジェネシスブロック
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s17">
+  <div class="tag">ジェネシスブロック · 2009年1月3日</div>
+  <p class="quote">
+    The Times 03/Jan/2009<br>Chancellor on brink of second bailout for banks
+  </p>
+  <p class="quote-attr">— サトシが採掘した最初のBitcoinブロックに刻み込まれたメッセージ</p>
+  <div style="max-width:580px;margin-top:26px;font-size:clamp(13px,1.55vw,16px);color:var(--muted);line-height:1.85;text-align:center">
+    これは偶然ではなかった。これは<strong style="color:var(--text)">宣言</strong>だった。<br>
+    Bitcoinは、お金が権力者に奉仕しつつ世の多数を犠牲にする世界への、<br>鮮明な回答だった。
+  </div>
+  <div style="margin-top:22px;display:flex;gap:9px;flex-wrap:wrap;justify-content:center">
+    <span class="badge badge-r">銀行の失敗</span>
+    <span class="badge badge-o">コードという代替手段</span>
+    <span class="badge badge-g">信頼としての数学</span>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     18 · まとめ
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s18">
+  <div class="tag">まとめ</div>
+  <h2 style="max-width:760px;line-height:1.25">暗号通貨は単なる<br><span class="o">「デジタルマネー」</span>ではない</h2>
+  <div class="divider" style="margin:18px auto 18px"></div>
+  <div style="max-width:660px;font-size:clamp(13px,1.6vw,17px);color:rgba(232,232,240,.8);line-height:1.95;margin-bottom:26px">
+    何千年もの間、貨幣供給をコントロールする者が社会をコントロールしてきた。<br>
+    Bitcoinは初めて、その権力を単一の権威から取り除いた。<br><br>
+    それは<span class="g">信頼</span>・<span class="b">所有権</span>・<span class="o">価値</span>のための新しいパラダイムだ——<br>
+    オープンソースコードによって統治され、数学によって守られ、<strong style="color:var(--text)">誰のものでもない</strong>。
+  </div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center">
+    <span class="badge badge-o">健全なお金</span>
+    <span class="badge badge-go">デジタルゴールド</span>
+    <span class="badge badge-b">プログラマブルファイナンス</span>
+    <span class="badge badge-g">金融包摂</span>
+    <span class="badge badge-p">新しい所有モデル</span>
+  </div>
+</div>
+
+
+</div><!-- #deck -->
+
+<div id="nav">
+  <button class="nav-btn" id="prev" title="前のスライド (←)">←</button>
+  <span id="counter">1 / 18</span>
+  <button class="nav-btn" id="next" title="次のスライド (→)">→</button>
+</div>
+
+<script>
+const slides = Array.from(document.querySelectorAll('.slide'));
+const total  = slides.length;
+let cur = 0;
+
+function jumpTo(n) {
+  slides[cur].classList.remove('active');
+  cur = Math.max(0, Math.min(total - 1, n));
+  slides[cur].classList.add('active');
+  history.replaceState(null, '', '#' + (cur + 1));
+  updateUI();
+}
+
+function goto(n) {
+  const next = Math.max(0, Math.min(total - 1, n));
+  if (next === cur) return;
+  const forward = next > cur;
+
+  const outSlide = slides[cur];
+  outSlide.style.transition = 'opacity .42s ease, transform .42s ease';
+  outSlide.style.transform  = forward ? 'translateX(-52px)' : 'translateX(52px)';
+  outSlide.style.opacity    = '0';
+  outSlide.classList.remove('active');
+  setTimeout(() => {
+    outSlide.style.transition = '';
+    outSlide.style.transform  = '';
+    outSlide.style.opacity    = '';
+  }, 450);
+
+  cur = next;
+  const inSlide = slides[cur];
+  inSlide.style.transition = 'none';
+  inSlide.style.transform  = forward ? 'translateX(52px)' : 'translateX(-52px)';
+  inSlide.style.opacity    = '0';
+  inSlide.classList.add('active');
+  inSlide.getBoundingClientRect();
+  inSlide.style.transition = 'opacity .42s ease, transform .42s ease';
+  inSlide.style.transform  = 'translateX(0)';
+  inSlide.style.opacity    = '1';
+  setTimeout(() => {
+    inSlide.style.transition = '';
+    inSlide.style.transform  = '';
+    inSlide.style.opacity    = '';
+  }, 450);
+
+  history.replaceState(null, '', '#' + (cur + 1));
+  updateUI();
+}
+
+function updateUI() {
+  document.getElementById('counter').textContent = `${cur + 1} / ${total}`;
+  document.getElementById('progress-bar').style.width = `${((cur + 1) / total) * 100}%`;
+}
+
+document.getElementById('next').addEventListener('click', () => goto(cur + 1));
+document.getElementById('prev').addEventListener('click', () => goto(cur - 1));
+
+document.addEventListener('keydown', e => {
+  if (['ArrowRight',' ','ArrowDown','PageDown'].includes(e.key)) { e.preventDefault(); goto(cur + 1); }
+  if (['ArrowLeft','ArrowUp','PageUp'].includes(e.key))          { e.preventDefault(); goto(cur - 1); }
+});
+
+let tx = 0;
+document.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+document.addEventListener('touchend',   e => {
+  const dx = tx - e.changedTouches[0].clientX;
+  if (Math.abs(dx) > 48) goto(dx > 0 ? cur + 1 : cur - 1);
+});
+
+window.addEventListener('hashchange', () => {
+  const n = parseInt(window.location.hash.slice(1), 10) - 1;
+  if (!isNaN(n) && n >= 0 && n < total && n !== cur) jumpTo(n);
+});
+
+const initSlide = parseInt(window.location.hash.slice(1), 10) - 1;
+if (initSlide > 0 && initSlide < total) {
+  jumpTo(initSlide);
+} else {
+  history.replaceState(null, '', '#1');
+  updateUI();
+}
+</script>
+</body>
+</html>

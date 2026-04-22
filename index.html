@@ -844,6 +844,89 @@
 
 
 <!-- ════════════════════════════════════════════
+     16b · KelpDAO事件
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s16b">
+  <div class="tag" style="color:var(--red)">セキュリティ事件 · 2026年4月18日</div>
+  <h2>DVNバリデータが<span class="r">乗っ取られた</span>夜</h2>
+  <div class="divider" style="background:var(--red)"></div>
+  <div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:22px;width:100%;max-width:900px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:11px">
+      <div class="card" style="border-left:3px solid var(--red)">
+        <div class="card-title" style="color:var(--red)">① DVNバリデータノードを乗っ取る</div>
+        <div class="card-body">LayerZeroのRPCノードに侵入し、取引を「正当」と検証するDVNソフトウェアを悪意あるものに差し替えた</div>
+      </div>
+      <div class="card" style="border-left:3px solid var(--red)">
+        <div class="card-title" style="color:var(--red)">② KelpDAOが 1/1 DVN設定だった</div>
+        <div class="card-body">バリデータが1つだけ——1つを騙せば十分。複数DVNによる二重検証なし。単一障害点（SPOF）。</div>
+      </div>
+      <div class="card" style="border-left:3px solid var(--red)">
+        <div class="card-title" style="color:var(--red)">③ 偽取引が「承認」され資金が流出</div>
+        <div class="card-body">116,500枚のrsETHが盗まれ、Lazarusグループが複数チェーンを経由し資金を洗浄。46分後にKelpDAOが検知・停止。</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:11px">
+      <div class="card" style="border-color:rgba(239,68,68,.3);background:rgba(239,68,68,.05);text-align:center;padding:20px">
+        <div style="font-size:42px;font-weight:700;color:var(--red);font-family:'Space Grotesk',sans-serif;line-height:1">$292M</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:5px">約430億円 が46分で消えた</div>
+      </div>
+      <div class="card" style="border-color:rgba(239,68,68,.2)">
+        <div class="card-body" style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;justify-content:space-between;font-size:14px">
+            <span style="color:var(--muted)">攻撃主体</span>
+            <span style="color:var(--text)">北朝鮮 Lazarus Group</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:14px">
+            <span style="color:var(--muted)">DeFi TVL 被害</span>
+            <span style="color:var(--red)">−$130億</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:14px">
+            <span style="color:var(--muted)">Aave 焦げ付き</span>
+            <span style="color:var(--red)">$196M</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:14px">
+            <span style="color:var(--muted)">凍結できた額</span>
+            <span style="color:var(--green)">$100M（Arbitrum）</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     16c · リスクの教訓
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s16c">
+  <div class="tag" style="color:var(--red)">この事件から学ぶ</div>
+  <h2>暗号資産の<span class="r">「見えないリスク」</span></h2>
+  <div class="divider" style="background:var(--red)"></div>
+  <div class="principle-grid" style="max-width:840px">
+    <div class="principle-card" style="border-color:var(--red)">
+      <h4 style="color:var(--red)">① スマートコントラクトリスク</h4>
+      <p>コードのバグや設定ミスは即座に資金喪失に直結する。監査済みでも、設定は開発者の判断に委ねられている。</p>
+    </div>
+    <div class="principle-card" style="border-color:var(--orange)">
+      <h4 style="color:var(--orange)">② ブリッジリスク</h4>
+      <p>チェーンをまたぐほど「信頼する仲介者」が増え、攻撃面も増大する。ブリッジは歴史的に最も狙われやすい。</p>
+    </div>
+    <div class="principle-card" style="border-color:var(--gold)">
+      <h4 style="color:var(--gold)">③ 単一障害点（SPOF）</h4>
+      <p>「1/1 DVN」= バリデータが1つ。分散化を謳うシステムも、DVN設定次第で極めて中央集権的になりうる。</p>
+    </div>
+    <div class="principle-card" style="border-color:var(--purple)">
+      <h4 style="color:var(--purple)">④ 国家レベルの攻撃者</h4>
+      <p>北朝鮮Lazarusグループは2024〜26年だけで数十億ドルを窃取。暗号資産は国家の資金調達手段になっている。</p>
+    </div>
+  </div>
+  <div style="margin-top:18px;max-width:680px;font-size:clamp(13px,1.55vw,16px);color:var(--muted);line-height:1.8;text-align:center">
+    「<span style="color:var(--text)">Not your keys, not your coins</span>」——秘密鍵を自分で管理し、<br>プロトコルを使う前にそのリスク設計を理解することが自衛の基本。
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
      17 · ジェネシスブロック
      ════════════════════════════════════════════ -->
 <div class="slide" id="s17">
@@ -865,7 +948,98 @@
 
 
 <!-- ════════════════════════════════════════════
-     18 · まとめ
+     18 · メリット・リスク比較
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s18">
+  <div class="tag">ユーザー視点</div>
+  <h2>暗号通貨を使う<span class="g">メリット</span>と<span class="r">リスク</span></h2>
+  <div class="divider"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;width:100%;max-width:960px;align-items:start">
+
+    <!-- メリット列 -->
+    <div style="display:flex;flex-direction:column;gap:0">
+      <div style="font-size:10px;text-transform:uppercase;letter-spacing:2px;color:var(--green);font-family:'JetBrains Mono',monospace;margin-bottom:10px;padding-left:2px">✓ メリット・利点</div>
+      <table style="width:100%;border-collapse:collapse">
+        <thead>
+          <tr>
+            <th style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);padding:6px 10px;text-align:left;border-bottom:1px solid var(--border);font-weight:500">項目</th>
+            <th style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);padding:6px 10px;text-align:left;border-bottom:1px solid var(--border);font-weight:500">内容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04)">
+            <td style="padding:9px 10px;font-size:12.5px;font-weight:600;color:var(--green);white-space:nowrap">🌍 金融包摂</td>
+            <td style="padding:9px 10px;font-size:12px;color:rgba(232,232,240,.75);line-height:1.5">銀行口座なしで誰でも参加可能。世界14億人の非銀行層が利用できる</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04)">
+            <td style="padding:9px 10px;font-size:12.5px;font-weight:600;color:var(--green);white-space:nowrap">🚀 国際送金</td>
+            <td style="padding:9px 10px;font-size:12px;color:rgba(232,232,240,.75);line-height:1.5">数分・低コストで世界中へ送金。従来の国際送金は5〜10%の手数料</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04)">
+            <td style="padding:9px 10px;font-size:12.5px;font-weight:600;color:var(--green);white-space:nowrap">🔒 検閲耐性</td>
+            <td style="padding:9px 10px;font-size:12px;color:rgba(232,232,240,.75);line-height:1.5">銀行・政府に口座凍結や送金停止をされない。自己主権の実現</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04)">
+            <td style="padding:9px 10px;font-size:12.5px;font-weight:600;color:var(--green);white-space:nowrap">📊 透明性</td>
+            <td style="padding:9px 10px;font-size:12px;color:rgba(232,232,240,.75);line-height:1.5">すべての取引が公開台帳に記録。誰でも検証でき、改ざんは不可能</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04)">
+            <td style="padding:9px 10px;font-size:12.5px;font-weight:600;color:var(--green);white-space:nowrap">🛡️ インフレ対策</td>
+            <td style="padding:9px 10px;font-size:12px;color:rgba(232,232,240,.75);line-height:1.5">固定供給量により法定通貨の価値希薄化から資産を守る可能性</td>
+          </tr>
+          <tr>
+            <td style="padding:9px 10px;font-size:12.5px;font-weight:600;color:var(--green);white-space:nowrap">⏰ 24/7稼働</td>
+            <td style="padding:9px 10px;font-size:12px;color:rgba(232,232,240,.75);line-height:1.5">土日・祝日・深夜問わず、いつでも取引可能。銀行の営業時間なし</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- リスク列 -->
+    <div style="display:flex;flex-direction:column;gap:0">
+      <div style="font-size:10px;text-transform:uppercase;letter-spacing:2px;color:var(--red);font-family:'JetBrains Mono',monospace;margin-bottom:10px;padding-left:2px">✕ リスク・デメリット</div>
+      <table style="width:100%;border-collapse:collapse">
+        <thead>
+          <tr>
+            <th style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);padding:6px 10px;text-align:left;border-bottom:1px solid var(--border);font-weight:500">項目</th>
+            <th style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);padding:6px 10px;text-align:left;border-bottom:1px solid var(--border);font-weight:500">内容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04)">
+            <td style="padding:9px 10px;font-size:12.5px;font-weight:600;color:var(--red);white-space:nowrap">📉 高ボラティリティ</td>
+            <td style="padding:9px 10px;font-size:12px;color:rgba(232,232,240,.75);line-height:1.5">価格が数日で50%以上変動することも。日常決済には不向きな場合がある</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04)">
+            <td style="padding:9px 10px;font-size:12.5px;font-weight:600;color:var(--red);white-space:nowrap">🔑 自己責任</td>
+            <td style="padding:9px 10px;font-size:12px;color:rgba(232,232,240,.75);line-height:1.5">秘密鍵を紛失すると資産は永久に失われる。銀行のような救済措置はない</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04)">
+            <td style="padding:9px 10px;font-size:12.5px;font-weight:600;color:var(--red);white-space:nowrap">⚠️ 詐欺・ハック</td>
+            <td style="padding:9px 10px;font-size:12px;color:rgba(232,232,240,.75);line-height:1.5">偽プロジェクト・フィッシング・取引所ハックなどの被害が多発している</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04)">
+            <td style="padding:9px 10px;font-size:12.5px;font-weight:600;color:var(--red);white-space:nowrap">⚖️ 規制リスク</td>
+            <td style="padding:9px 10px;font-size:12px;color:rgba(232,232,240,.75);line-height:1.5">各国の規制変更により、利用制限・課税・取引所閉鎖のリスクがある</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04)">
+            <td style="padding:9px 10px;font-size:12.5px;font-weight:600;color:var(--red);white-space:nowrap">↩️ 取引不可逆性</td>
+            <td style="padding:9px 10px;font-size:12px;color:rgba(232,232,240,.75);line-height:1.5">誤送金・詐欺被害があっても取り消し不可。クレジットカードのような保護なし</td>
+          </tr>
+          <tr>
+            <td style="padding:9px 10px;font-size:12.5px;font-weight:600;color:var(--red);white-space:nowrap">⚡ 技術的障壁</td>
+            <td style="padding:9px 10px;font-size:12px;color:rgba(232,232,240,.75);line-height:1.5">ウォレット管理・秘密鍵・ガス代など、正しく使うには学習コストが高い</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     19 · まとめ
      ════════════════════════════════════════════ -->
 <div class="slide" id="s18">
   <div class="tag">まとめ</div>
@@ -891,7 +1065,7 @@
 
 <div id="nav">
   <button class="nav-btn" id="prev" title="前のスライド (←)">←</button>
-  <span id="counter">1 / 18</span>
+  <span id="counter">1 / 19</span>
   <button class="nav-btn" id="next" title="次のスライド (→)">→</button>
 </div>
 

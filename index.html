@@ -860,89 +860,6 @@
 
 
 <!-- ════════════════════════════════════════════
-     16b · KelpDAO事件
-     ════════════════════════════════════════════ -->
-<div class="slide" id="s16b">
-  <div class="tag" style="color:var(--red)">セキュリティ事件 · 2026年4月18日</div>
-  <h2>DVNバリデータが<span class="r">乗っ取られた</span>夜</h2>
-  <div class="divider" style="background:var(--red)"></div>
-  <div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:22px;width:100%;max-width:900px;align-items:start">
-    <div style="display:flex;flex-direction:column;gap:11px">
-      <div class="card" style="border-left:3px solid var(--red)">
-        <div class="card-title" style="color:var(--red)">① DVNバリデータノードを乗っ取る</div>
-        <div class="card-body">LayerZeroのRPCノードに侵入し、取引を「正当」と検証するDVNソフトウェアを悪意あるものに差し替えた</div>
-      </div>
-      <div class="card" style="border-left:3px solid var(--red)">
-        <div class="card-title" style="color:var(--red)">② KelpDAOが 1/1 DVN設定だった</div>
-        <div class="card-body">バリデータが1つだけ——1つを騙せば十分。複数DVNによる二重検証なし。単一障害点（SPOF）。</div>
-      </div>
-      <div class="card" style="border-left:3px solid var(--red)">
-        <div class="card-title" style="color:var(--red)">③ 偽取引が「承認」され資金が流出</div>
-        <div class="card-body">116,500枚のrsETHが盗まれ、Lazarusグループが複数チェーンを経由し資金を洗浄。46分後にKelpDAOが検知・停止。</div>
-      </div>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:11px">
-      <div class="card" style="border-color:rgba(239,68,68,.3);background:rgba(239,68,68,.05);text-align:center;padding:20px">
-        <div style="font-size:42px;font-weight:700;color:var(--red);font-family:'Space Grotesk',sans-serif;line-height:1">$292M</div>
-        <div style="font-size:13px;color:var(--muted);margin-top:5px">約430億円 が46分で消えた</div>
-      </div>
-      <div class="card" style="border-color:rgba(239,68,68,.2)">
-        <div class="card-body" style="display:flex;flex-direction:column;gap:8px">
-          <div style="display:flex;justify-content:space-between;font-size:14px">
-            <span style="color:var(--muted)">攻撃主体</span>
-            <span style="color:var(--text)">北朝鮮 Lazarus Group</span>
-          </div>
-          <div style="display:flex;justify-content:space-between;font-size:14px">
-            <span style="color:var(--muted)">DeFi TVL 被害</span>
-            <span style="color:var(--red)">−$130億</span>
-          </div>
-          <div style="display:flex;justify-content:space-between;font-size:14px">
-            <span style="color:var(--muted)">Aave 焦げ付き</span>
-            <span style="color:var(--red)">$196M</span>
-          </div>
-          <div style="display:flex;justify-content:space-between;font-size:14px">
-            <span style="color:var(--muted)">凍結できた額</span>
-            <span style="color:var(--green)">$100M（Arbitrum）</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- ════════════════════════════════════════════
-     16c · リスクの教訓
-     ════════════════════════════════════════════ -->
-<div class="slide" id="s16c">
-  <div class="tag" style="color:var(--red)">この事件から学ぶ</div>
-  <h2>暗号資産の<span class="r">「見えないリスク」</span></h2>
-  <div class="divider" style="background:var(--red)"></div>
-  <div class="principle-grid" style="max-width:840px">
-    <div class="principle-card" style="border-color:var(--red)">
-      <h4 style="color:var(--red)">① スマートコントラクトリスク</h4>
-      <p>コードのバグや設定ミスは即座に資金喪失に直結する。監査済みでも、設定は開発者の判断に委ねられている。</p>
-    </div>
-    <div class="principle-card" style="border-color:var(--orange)">
-      <h4 style="color:var(--orange)">② ブリッジリスク</h4>
-      <p>チェーンをまたぐほど「信頼する仲介者」が増え、攻撃面も増大する。ブリッジは歴史的に最も狙われやすい。</p>
-    </div>
-    <div class="principle-card" style="border-color:var(--gold)">
-      <h4 style="color:var(--gold)">③ 単一障害点（SPOF）</h4>
-      <p>「1/1 DVN」= バリデータが1つ。分散化を謳うシステムも、DVN設定次第で極めて中央集権的になりうる。</p>
-    </div>
-    <div class="principle-card" style="border-color:var(--purple)">
-      <h4 style="color:var(--purple)">④ 国家レベルの攻撃者</h4>
-      <p>北朝鮮Lazarusグループは2024〜26年だけで数十億ドルを窃取。暗号資産は国家の資金調達手段になっている。</p>
-    </div>
-  </div>
-  <div style="margin-top:18px;max-width:680px;font-size:clamp(13px,1.55vw,16px);color:var(--muted);line-height:1.8;text-align:center">
-    「<span style="color:var(--text)">Not your keys, not your coins</span>」——秘密鍵を自分で管理し、<br>プロトコルを使う前にそのリスク設計を理解することが自衛の基本。
-  </div>
-</div>
-
-
-<!-- ════════════════════════════════════════════
      17 · ジェネシスブロック
      ════════════════════════════════════════════ -->
 <div class="slide" id="s17">
@@ -1077,6 +994,89 @@
     <span class="badge badge-b">プログラマブルファイナンス</span>
     <span class="badge badge-g">金融包摂</span>
     <span class="badge badge-p">新しい所有モデル</span>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     20 · KelpDAO事件
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s16b">
+  <div class="tag" style="color:var(--red)">セキュリティ事件 · 2026年4月18日</div>
+  <h2>DVNバリデータが<span class="r">乗っ取られた</span>夜</h2>
+  <div class="divider" style="background:var(--red)"></div>
+  <div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:22px;width:100%;max-width:900px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:11px">
+      <div class="card" style="border-left:3px solid var(--red)">
+        <div class="card-title" style="color:var(--red)">① DVNバリデータノードを乗っ取る</div>
+        <div class="card-body">LayerZeroのRPCノードに侵入し、取引を「正当」と検証するDVNソフトウェアを悪意あるものに差し替えた</div>
+      </div>
+      <div class="card" style="border-left:3px solid var(--red)">
+        <div class="card-title" style="color:var(--red)">② KelpDAOが 1/1 DVN設定だった</div>
+        <div class="card-body">バリデータが1つだけ——1つを騙せば十分。複数DVNによる二重検証なし。単一障害点（SPOF）。</div>
+      </div>
+      <div class="card" style="border-left:3px solid var(--red)">
+        <div class="card-title" style="color:var(--red)">③ 偽取引が「承認」され資金が流出</div>
+        <div class="card-body">116,500枚のrsETHが盗まれ、Lazarusグループが複数チェーンを経由し資金を洗浄。46分後にKelpDAOが検知・停止。</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:11px">
+      <div class="card" style="border-color:rgba(239,68,68,.3);background:rgba(239,68,68,.05);text-align:center;padding:20px">
+        <div style="font-size:42px;font-weight:700;color:var(--red);font-family:'Space Grotesk',sans-serif;line-height:1">$292M</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:5px">約430億円 が46分で消えた</div>
+      </div>
+      <div class="card" style="border-color:rgba(239,68,68,.2)">
+        <div class="card-body" style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;justify-content:space-between;font-size:14px">
+            <span style="color:var(--muted)">攻撃主体</span>
+            <span style="color:var(--text)">北朝鮮 Lazarus Group</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:14px">
+            <span style="color:var(--muted)">DeFi TVL 被害</span>
+            <span style="color:var(--red)">−$130億</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:14px">
+            <span style="color:var(--muted)">Aave 焦げ付き</span>
+            <span style="color:var(--red)">$196M</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:14px">
+            <span style="color:var(--muted)">凍結できた額</span>
+            <span style="color:var(--green)">$100M（Arbitrum）</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     21 · リスクの教訓
+     ════════════════════════════════════════════ -->
+<div class="slide" id="s16c">
+  <div class="tag" style="color:var(--red)">この事件から学ぶ</div>
+  <h2>暗号資産の<span class="r">「見えないリスク」</span></h2>
+  <div class="divider" style="background:var(--red)"></div>
+  <div class="principle-grid" style="max-width:840px">
+    <div class="principle-card" style="border-color:var(--red)">
+      <h4 style="color:var(--red)">① スマートコントラクトリスク</h4>
+      <p>コードのバグや設定ミスは即座に資金喪失に直結する。監査済みでも、設定は開発者の判断に委ねられている。</p>
+    </div>
+    <div class="principle-card" style="border-color:var(--orange)">
+      <h4 style="color:var(--orange)">② ブリッジリスク</h4>
+      <p>チェーンをまたぐほど「信頼する仲介者」が増え、攻撃面も増大する。ブリッジは歴史的に最も狙われやすい。</p>
+    </div>
+    <div class="principle-card" style="border-color:var(--gold)">
+      <h4 style="color:var(--gold)">③ 単一障害点（SPOF）</h4>
+      <p>「1/1 DVN」= バリデータが1つ。分散化を謳うシステムも、DVN設定次第で極めて中央集権的になりうる。</p>
+    </div>
+    <div class="principle-card" style="border-color:var(--purple)">
+      <h4 style="color:var(--purple)">④ 国家レベルの攻撃者</h4>
+      <p>北朝鮮Lazarusグループは2024〜26年だけで数十億ドルを窃取。暗号資産は国家の資金調達手段になっている。</p>
+    </div>
+  </div>
+  <div style="margin-top:18px;max-width:680px;font-size:clamp(13px,1.55vw,16px);color:var(--muted);line-height:1.8;text-align:center">
+    「<span style="color:var(--text)">Not your keys, not your coins</span>」——秘密鍵を自分で管理し、<br>プロトコルを使う前にそのリスク設計を理解することが自衛の基本。
   </div>
 </div>
 

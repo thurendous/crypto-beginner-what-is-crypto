@@ -1255,6 +1255,7 @@ function goto(n) {
 
   history.replaceState(null, '', '#' + (cur + 1));
   updateUI();
+  window.scrollTo(0, 0);
 }
 
 function updateUI() {
@@ -1289,6 +1290,13 @@ if (initSlide > 0 && initSlide < total) {
   history.replaceState(null, '', '#1');
   updateUI();
 }
+// ── モバイル：インラインgridを1列化するクラスを追加 ──
+document.querySelectorAll('[style]').forEach(el => {
+  if (el.style.gridTemplateColumns && el.style.gridTemplateColumns !== '1fr') {
+    el.classList.add('responsive-grid');
+  }
+});
+
 </script>
 </body>
 </html>

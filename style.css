@@ -190,3 +190,151 @@ h3 { font-size: clamp(18px, 2.2vw, 28px); font-weight: 300; color: var(--muted);
 #s16c { background: radial-gradient(ellipse at 85% 40%, rgba(239,68,68,.07) 0%, transparent 55%), radial-gradient(ellipse at 20% 70%, rgba(247,147,26,.05) 0%, transparent 50%), var(--bg); }
 #s17 { background: radial-gradient(ellipse at center, rgba(247,147,26,.07) 0%, transparent 65%), var(--bg); text-align: center; }
 #s18 { background: radial-gradient(ellipse at 20% 50%, rgba(247,147,26,.08) 0%, transparent 55%), radial-gradient(ellipse at 80% 55%, rgba(98,126,234,.08) 0%, transparent 55%), var(--bg); text-align: center; }
+
+
+/* ═══════════════════════════════════════════════
+   レスポンシブ — タブレット (≤ 900px)
+   ═══════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  html, body { overflow-x: hidden; overflow-y: auto; height: auto; }
+  #deck { height: auto; min-height: 100vh; }
+
+  .slide {
+    position: relative; inset: auto;
+    display: none;
+    padding: 32px 28px 80px;
+    min-height: 100vh;
+    justify-content: flex-start;
+    padding-top: 48px;
+  }
+  .slide.active { display: flex; opacity: 1; pointer-events: auto; }
+
+  h2 { font-size: clamp(24px, 5vw, 38px); }
+  h3 { font-size: clamp(15px, 3vw, 22px); }
+  .tag { font-size: 18px; }
+
+  .bullets li { font-size: clamp(14px, 2.5vw, 18px); padding-left: 18px; }
+  .card { padding: 16px; }
+  .card-icon { font-size: 28px; margin-bottom: 6px; }
+  .card-title { font-size: 15px; }
+  .card-body { font-size: 14px; }
+
+  .principle-card h4 { font-size: 16px; }
+  .principle-card p { font-size: 14px; }
+
+  .tl-title { font-size: 15px; }
+  .tl-desc { font-size: 13.5px; }
+
+  .quote { font-size: clamp(18px, 3.5vw, 28px); }
+  .quote-attr { font-size: 12px; }
+}
+
+
+/* ═══════════════════════════════════════════════
+   レスポンシブ — スマートフォン (≤ 640px)
+   ═══════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  .slide {
+    padding: 24px 18px 90px;
+    padding-top: 40px;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  h2 { font-size: clamp(20px, 6vw, 30px); }
+  .tag { font-size: 15px; letter-spacing: 1px; }
+  .divider { margin: 8px 0 16px; }
+
+  /* ── グリッドをすべて1列に ── */
+  .grid2,
+  .grid3,
+  .grid4,
+  .principle-grid,
+  .compare-grid,
+  .responsive-grid,
+  [style*="grid-template-columns: 1fr 1fr"],
+  [style*="grid-template-columns:1fr 1fr"],
+  [style*="grid-template-columns: 1.1fr"],
+  [style*="grid-template-columns:1.1fr"],
+  [style*="grid-template-columns: 1.2fr"],
+  [style*="grid-template-columns:1.2fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  /* ── カード調整 ── */
+  .card { padding: 14px; border-radius: 12px; }
+  .card-icon { font-size: 24px; margin-bottom: 5px; }
+  .card-title { font-size: 13.5px; }
+  .card-body { font-size: 13px; line-height: 1.6; }
+
+  /* ── バッジ調整 ── */
+  .badge { font-size: 11px; padding: 4px 10px; }
+
+  /* ── 箇条書き ── */
+  .bullets li { font-size: 13.5px; line-height: 1.6; padding-left: 16px; gap: 8px; }
+  .bullets { gap: 8px; }
+
+  /* ── タイムライン ── */
+  .timeline { gap: 0; }
+  .tl-item { gap: 10px; padding-bottom: 12px; }
+  .tl-item::before { left: 35px; }
+  .tl-year { font-size: 12px; width: 32px; }
+  .tl-dot { width: 9px; height: 9px; margin-top: 4px; }
+  .tl-title { font-size: 14px; }
+  .tl-desc { font-size: 12.5px; line-height: 1.55; }
+
+  /* ── ステップフロー ── */
+  .step-flow { gap: 2px; }
+  .step { padding: 0 4px; }
+  .step-icon { font-size: 22px; margin-bottom: 4px; }
+  .step-label { font-size: 11px; }
+  .step-sub { font-size: 9.5px; }
+  .step-arrow { font-size: 13px; }
+
+  /* ── S2F バー ── */
+  .s2f-row { gap: 6px; flex-wrap: wrap; }
+  .s2f-label { font-size: 12.5px; width: 100%; }
+  .s2f-bar-wrap { flex: 1; min-width: 100px; height: 18px; }
+  .s2f-val { font-size: 12px; width: auto; }
+
+  /* ── 半減期テーブル ── */
+  .halving-table th { font-size: 10px; padding: 7px 10px; letter-spacing: 1px; }
+  .halving-table td { font-size: 13px; padding: 9px 10px; }
+
+  /* ── 比較ボックス ── */
+  .compare-box { padding: 16px; }
+  .compare-box li { font-size: 12px; }
+
+  /* ── プリンシプルカード ── */
+  .principle-card { padding: 14px; }
+  .principle-card h4 { font-size: 14.5px; margin-bottom: 6px; }
+  .principle-card p { font-size: 13px; line-height: 1.6; }
+
+  /* ── 引用 ── */
+  .quote { font-size: clamp(16px, 5vw, 24px); padding: 0 8px; }
+  .quote-attr { font-size: 11px; }
+
+  /* ── ナビゲーション ── */
+  #nav {
+    bottom: 16px;
+    gap: 10px;
+    padding: 6px 12px;
+    background: rgba(8,8,15,.85);
+    backdrop-filter: blur(12px);
+    border-radius: 24px;
+    border: 1px solid var(--border);
+  }
+  .nav-btn { width: 34px; height: 34px; font-size: 14px; }
+  #counter { font-size: 11px; min-width: 48px; }
+
+  /* ── インラインstyleのグリッド上書き ── */
+  /* s4スライドの2カラムグリッド */
+  #s4 > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+
+  /* ── DeFiカード (grid4の後のflexカード) ── */
+  #s13 > div[style*="justify-content:center"] > .card { width: 100% !important; }
+
+  /* ── メリット/リスクテーブルのスクロール ── */
+  #s18 table { display: block; overflow-x: auto; }
+}
